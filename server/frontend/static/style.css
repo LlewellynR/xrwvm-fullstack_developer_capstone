@@ -4,7 +4,7 @@ img{
 }
 
 .card{
-  border: rgb(103, 102, 105) 3px solid;
+  border: rgb(77, 16, 200) 3px solid;
   display: flex;  
   flex-direction: column;
   margin-left:5%;
@@ -118,7 +118,7 @@ img{
 .img_icon {
   align-self: center;
     width:40px;
-    background-color:#0C9;
+    background-color:#800000;
     color:#FFF;
     border-radius:50px;
     text-align:center;
