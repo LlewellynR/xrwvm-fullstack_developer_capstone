@@ -21,9 +21,8 @@ const Dealers = () => {
     });
     const retobj = await res.json();
     
-    if(retobj.status === 200) {
-      let state_dealers = Array.from(retobj.dealers)
-      setDealersList(state_dealers)
+    if (retobj.status === 200 && Array.isArray(retobj.dealers)) {
+        setDealersList(retobj.dealers);
     }
   }
 
