@@ -20,6 +20,7 @@ const Dealers = () => {
       method: "GET"
     });
     const retobj = await res.json();
+    
     if(retobj.status === 200) {
       let state_dealers = Array.from(retobj.dealers)
       setDealersList(state_dealers)
@@ -31,6 +32,9 @@ const Dealers = () => {
       method: "GET"
     });
     const retobj = await res.json();
+
+    console.log("Full response:", retobj);
+    console.log("Dealers:", retobj.dealers);
     if(retobj.status === 200) {
       let all_dealers = Array.from(retobj.dealers)
       let states = [];
@@ -45,6 +49,7 @@ const Dealers = () => {
   useEffect(() => {
     get_dealers();
   },[]);  
+  
 
 
 let isLoggedIn = sessionStorage.getItem("username") != null ? true : false;
